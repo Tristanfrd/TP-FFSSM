@@ -54,7 +54,7 @@ public class Licence {
      * @return vrai si valide à la date d
      **/
     public boolean estValide(LocalDate d) {
-         if (this.delivrance.compareTo(d)>=0){
+         if (this.delivrance.plusYears(1).compareTo(d)>=0){
              validité = true;
          }else{
              validité = false;
