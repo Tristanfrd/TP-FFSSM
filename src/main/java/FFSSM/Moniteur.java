@@ -12,7 +12,6 @@ public class Moniteur extends Personne {
 
     public int numeroDiplome;
     private ArrayList<Embauche> embauche= new ArrayList<>();
-    private ArrayList<Embauche> emplois= new ArrayList<>();
 
     public Moniteur(String numeroINSEE, String nom, String prenom, String adresse, String telephone, LocalDate naissance, int numeroDiplome) {
         super(numeroINSEE, nom, prenom, adresse, telephone, naissance);
@@ -46,10 +45,10 @@ public class Moniteur extends Personne {
     public void terminerEmbauche(LocalDate fin){
         Embauche e = embauche.get(embauche.size()-1);
         e.terminer(fin);
-        emplois.add(e);
     }
+    
     public List<Embauche> emplois() {
-        return emplois;
+        return embauche;
     }
 
 }
