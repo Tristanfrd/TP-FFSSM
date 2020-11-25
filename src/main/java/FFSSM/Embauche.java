@@ -78,5 +78,10 @@ public class Embauche {
         return debut;
     }
 
+    @Override
+    public String toString() {
+        return "Embauche{" + "debut=" + debut + ", fin=" + fin + ", employe=" + employe + ", employeur=" + employeur + '}';
+    }
+
     
 }
